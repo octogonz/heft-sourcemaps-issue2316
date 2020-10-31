@@ -439,6 +439,10 @@
     {
       "packageName": "heft-webpack-basic-tutorial",
       "projectFolder": "heft-webpack-basic-tutorial"
+    },
+    {
+      "packageName": "heft-web-rig-library-test",
+      "projectFolder": "heft-web-rig-library-test"
     }
   ]
 }

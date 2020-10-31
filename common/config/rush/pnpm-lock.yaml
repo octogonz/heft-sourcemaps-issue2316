@@ -1,7 +1,9 @@
 dependencies:
+  '@rush-temp/heft-web-rig-library-test': 'file:projects/heft-web-rig-library-test.tgz'
   '@rush-temp/heft-webpack-basic-tutorial': 'file:projects/heft-webpack-basic-tutorial.tgz'
   '@rushstack/eslint-config': 2.3.0_eslint@7.12.1+typescript@3.9.7
   '@rushstack/heft': 0.19.2
+  '@rushstack/heft-web-rig': 0.1.15_@rushstack+heft@0.19.2
   '@types/heft-jest': 1.0.1
   '@types/react': 16.9.45
   '@types/react-dom': 16.9.8
@@ -542,6 +544,30 @@ packages:
       node: '>= 10.14.2'
     resolution:
       integrity: sha512-ywHavIKNpAVrStiRY5wiyehvcktpijpItvGiK72RAn5ctqmzvPk8OvKnvHeBqa1XdQr959CTWAJMqxI8BTibyg==
+  /@microsoft/api-extractor-model/7.10.8:
+    dependencies:
+      '@microsoft/tsdoc': 0.12.19
+      '@rushstack/node-core-library': 3.34.7
+    dev: false
+    resolution:
+      integrity: sha512-9TfiCTPnkUeLaYywZeg9rYbVPX9Tj6AAkO6ThnjSE0tTPLjMcL3RiHkqn0BJ4+aGcl56APwo32zj5+kG+NqxYA==
+  /@microsoft/api-extractor/7.11.2:
+    dependencies:
+      '@microsoft/api-extractor-model': 7.10.8
+      '@microsoft/tsdoc': 0.12.19
+      '@rushstack/node-core-library': 3.34.7
+      '@rushstack/rig-package': 0.2.7
+      '@rushstack/ts-command-line': 4.7.6
+      colors: 1.2.5
+      lodash: 4.17.20
+      resolve: 1.17.0
+      semver: 7.3.2
+      source-map: 0.6.1
+      typescript: 4.0.5
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-iZPv22j9K02cbwIDblOgF1MxZG+KWovp3CQpWCD6UC/+YYO4DfLxX5uZYVNzfgT4vU8fN0rugJmGm85rHX6Ouw==
   /@microsoft/tsdoc-config/0.13.6:
     dependencies:
       '@microsoft/tsdoc': 0.12.21
@@ -551,6 +577,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VJjV35PnrNISoX2WMemZjnCIdOUPTRpCz6pu8inISotLd3SgoDSJygGaE7+lOYdCtDl+4c8PWJdZivxxXgOnLw==
+  /@microsoft/tsdoc/0.12.19:
+    dev: false
+    resolution:
+      integrity: sha512-IpgPxHrNxZiMNUSXqR1l/gePKPkfAmIKoDRP9hp7OwjU29ZR8WCJsOJ8iBKgw0Qk+pFwR+8Y1cy8ImLY6e9m4A==
   /@microsoft/tsdoc/0.12.21:
     dev: false
     resolution:
@@ -617,6 +647,17 @@ packages:
       node: '>=10.13.0'
     resolution:
       integrity: sha512-zeuxgSwxI18pvaHR5joCLyAn4P4aREBK8+qp/Hfo4xZSRGsCR+utdWCdD2OiW4HwziIDqM+cZDpejacjGrxu7Q==
+  /@rushstack/heft-web-rig/0.1.15_@rushstack+heft@0.19.2:
+    dependencies:
+      '@microsoft/api-extractor': 7.11.2
+      '@rushstack/heft': 0.19.2
+      eslint: 7.12.1
+      typescript: 3.9.7
+    dev: false
+    peerDependencies:
+      '@rushstack/heft': ^0.19.2
+    resolution:
+      integrity: sha512-xFVAwOTfmNM/l/zI35iyKCX0ox4v+MKICE21Ue440DdsFsNXaZ0nP+DhRTk/7QRunY2EilgJMea53SdluR4j9g==
   /@rushstack/heft/0.19.2:
     dependencies:
       '@jest/core': 25.4.0
@@ -5498,7 +5539,7 @@ packages:
       cross-spawn: 3.0.1
       gaze: 1.1.3
       get-stdin: 4.0.1
-      glob: 7.1.6
+      glob: 7.0.6
       in-publish: 2.0.1
       lodash: 4.17.20
       meow: 3.7.0
@@ -7788,6 +7829,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+  /typescript/4.0.5:
+    dev: false
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-ywmr/VrTVCmNTJ6iV2LwIrfG1P+lv6luD8sUJs+2eI9NLGigaN+nUQc13iHqisq7bra9lnmUSYqbJvegraBOPQ==
   /union-value/1.0.1:
     dependencies:
       arr-union: 3.1.0
@@ -8354,6 +8402,17 @@ packages:
       commander: 2.20.3
     resolution:
       integrity: sha512-DUOKC/IhbkdLKKiV89gw9DUauTV8U/8yJl1sjf6MtDmzevLKOF2duNJ495S3MFVjqZarr+qNGCPbkg4mu4PpLw==
+  'file:projects/heft-web-rig-library-test.tgz':
+    dependencies:
+      '@rushstack/heft': 0.19.2
+      '@rushstack/heft-web-rig': 0.1.15_@rushstack+heft@0.19.2
+      '@types/heft-jest': 1.0.1
+    dev: false
+    name: '@rush-temp/heft-web-rig-library-test'
+    resolution:
+      integrity: sha512-JbYBtjY6bqPcMaxy4iSTcruCXAPUoB0OLYIi8a9UE+sIbyISnqtb5l758MfUpv5XumdqEuKvM1GmyW5X/LPilA==
+      tarball: 'file:projects/heft-web-rig-library-test.tgz'
+    version: 0.0.0
   'file:projects/heft-webpack-basic-tutorial.tgz':
     dependencies:
       '@rushstack/eslint-config': 2.3.0_eslint@7.12.1+typescript@3.9.7
@@ -8373,13 +8432,15 @@ packages:
     dev: false
     name: '@rush-temp/heft-webpack-basic-tutorial'
     resolution:
-      integrity: sha512-n9IlD5IW+7sL48LAbNanDzpOVgI4ej/xRSvW9uXqqHOgDa5p9iPMzGHnKlh0dnfU/ZulzlMDMf+qay0VMrTU8w==
+      integrity: sha512-XpYwUrepG0hnUK5dtlmuEjnJp0Myj21WN84of6EzCrgUf6ylgLXNOdSPJaH/PEI6aidWiZvCUSbruhVoTS66bg==
       tarball: 'file:projects/heft-webpack-basic-tutorial.tgz'
     version: 0.0.0
 specifiers:
+  '@rush-temp/heft-web-rig-library-test': 'file:./projects/heft-web-rig-library-test.tgz'
   '@rush-temp/heft-webpack-basic-tutorial': 'file:./projects/heft-webpack-basic-tutorial.tgz'
   '@rushstack/eslint-config': ~2.3.0
   '@rushstack/heft': ~0.19.2
+  '@rushstack/heft-web-rig': ~0.1.15
   '@types/heft-jest': 1.0.1
   '@types/react': 16.9.45
   '@types/react-dom': 16.9.8

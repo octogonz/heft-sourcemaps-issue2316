@@ -7,6 +7,9 @@
     "build": "heft test --clean",
     "start": "heft start"
   },
+  "dependencies": {
+    "heft-web-rig-library-test": "*"
+  },
   "devDependencies": {
     "@rushstack/eslint-config": "~2.3.0",
     "@rushstack/heft": "~0.19.2",

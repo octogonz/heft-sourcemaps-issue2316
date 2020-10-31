@@ -1,5 +1,7 @@
-import * as React from 'react';
-import { ToggleSwitch, IToggleEventArgs } from './ToggleSwitch';
+import * as React from "react";
+import { ToggleSwitch, IToggleEventArgs } from "./ToggleSwitch";
+
+import { TestClass } from "heft-web-rig-library-test";
 
 /**
  * This React component renders the application page.
@@ -7,18 +9,22 @@ import { ToggleSwitch, IToggleEventArgs } from './ToggleSwitch';
 export class ExampleApp extends React.Component {
   public render(): React.ReactNode {
     const appStyle: React.CSSProperties = {
-      backgroundColor: '#ffffff',
-      padding: '20px',
-      borderRadius: '5px',
-      width: '400px'
+      backgroundColor: "#ffffff",
+      padding: "20px",
+      borderRadius: "5px",
+      width: "400px",
     };
 
     return (
-      <div style={{ padding: '20px' }}>
+      <div style={{ padding: "20px" }}>
         <div style={appStyle}>
           <h2>Hello, world!</h2>
           Here is an example control:
-          <ToggleSwitch leftColor={'#800000'} rightColor={'#008000'} onToggle={this._onToggle} />
+          <ToggleSwitch
+            leftColor={"#800000"}
+            rightColor={"#008000"}
+            onToggle={this._onToggle}
+          />
         </div>
       </div>
     );
@@ -28,6 +34,9 @@ export class ExampleApp extends React.Component {
   // is bound correctly.  This form does not work with virtual/override inheritance, so use regular methods
   // everywhere else.
   private _onToggle = (sender: ToggleSwitch, args: IToggleEventArgs): void => {
-    console.log('Toggle switch changed: ' + args.sliderPosition);
+    console.log("Toggle switch changed: " + args.sliderPosition);
+
+    const testClass = new TestClass();
+    testClass.test();
   };
 }

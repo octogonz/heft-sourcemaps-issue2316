@@ -5,7 +5,7 @@
  * @public
  */
 export class TestClass {
-  public static getTrue(): boolean {
-    return true;
+  public test(): void {
+    debugger;
   }
 }
